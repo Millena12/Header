@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Header </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link href="https://unpkg.com/ionicons@4.2.0/dist/css/ionicons.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<script>
+	function openNav() {
+		opened = true;
+				console.log(opened);
+	document.getElementById("menu-responsivo").style.width = "300px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	}
+
+	function closeNav() {
+    document.getElementById("menu-responsivo").style.width = "0";
+    document.body.style.backgroundColor = "white";
+	}
+	
+	function openDropDown() {
+	document.getElementById("main-dropdown").style.display = "block";
+	}
+	
+	function closeDropDown() {
+	document.getElementById("main-dropdown").style.display = "none";
+	}
+
+	</script>
+	<body>
+	<header class="">
+		<div class="container">		
+				<nav id="top-menu" class="left">         
+						<p>Bem-vindo! <a href="#"><strong>Já é cadastrado?</strong></a></p>
+				</nav>
+				<nav id="top-menu" class="right">     
+						<p><a href="#">Meus Pedidos</a>
+						<a href="#">Central de atendimento</a></p>
+
+				</nav>
+				<nav id="middle-menu" class="left">
+							<input type="text" id="search-field" placeholder="Shampoo" />
+				</nav>
+				<nav id="middle-menu" class="right">
+				<div id="button">
+						<a href="#"><img src="02.png"></a>
+										<nav id="dropdown">
+						<div class="sub-topico">
+							<ul>
+								<li>Produto</li>
+								<div id="finalizar-compra">
+								FINALIZAR COMPRA
+								</div>
+							</ul>
+						</div>
+				</nav>	
+				</div>
+				<div id="button">				
+						<a href="#"><img src="icon-logout.png"></a>
+				</div>
+					</ul>
+				</nav>
+		<nav id="menu-principal">
+					<ul>              
+						<li><a href="#">Rosto</a></li>              
+						<li onmouseover="openDropDown()" onmouseleave="closeDropDown()"><a href="#">Cabelo</a></li>   
+						<li><a href="#">Corpo e Banho</a></li>
+						<li><a class="logo" href="/principal">
+						<img src="LoremIpsum.png" class="large">
+						</a></li>
+						<li><a href="#">Barba</a></li>
+						<li><a href="#">Acessórios</a></li>
+						<li><a href="#inscricoes">Kits e Presentes</a></li>						
+					</ul>
+		</nav>
+		<nav id="main-dropdown">
+					<h1>Cabelo</h1>
+					<ul>
+						<li>Teste</li>
+						<li>Teste</li>
+						<li>Teste</li>
+						<li>Teste</li>
+						<li>Teste</li>
+						<li>Teste</li>
+						<li>Teste</li>
+						<div>
+						<a>IR PARA CABELO</a>
+						</div>
+					</ul>
+		</nav>
+			<a href="javascript:void(0)" class="toggle-menu button-collapse" onclick="openNav()">
+				<i class="material-icons">menu</i>
+			</a>
+	</header>
+	<nav id="menu-responsivo" class="side-nav" style="left: 0px;">
+		<p class="data"><i class="material-icons" onclick="closeNav()">menu</i><i class="icon ion-md-search"></i><i class="icon ion-md-log-in"></i>
+		<i class="icon ion-md-cart"></i></p>
+			<li><a href="#inscricoes">Rosto</a></li>
+			<li><a href="#inscricoes">Cabelo</a></li>
+			<li><a href="#inscricoes">Barba</a></li>
+			<li><a href="#inscricoes">Acessórios</a></li>
+			<li><a href="#inscricoes">Kits e Presentes</a></li>
+	</nav>
+</body>
+</html>
